@@ -31,7 +31,7 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Sign|AnyCPU' ">
     <AssemblyOriginatorKeyFile>Raygun4Net4.snk</AssemblyOriginatorKeyFile>
-	<SignAssembly>true</SignAssembly>
+    <SignAssembly>true</SignAssembly>
     <OutputPath>bin\Sign\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <Optimize>true</Optimize>
@@ -39,7 +39,7 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-	<WarningLevel>4</WarningLevel>
+    <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.VisualBasic" />
@@ -87,6 +87,14 @@
     <Compile Include="..\Mindscape.Raygun4Net\RaygunMessageBuilder.cs">
       <Link>RaygunMessageBuilder.cs</Link>
     </Compile>
+    <Compile Include="ProfilingSupport\APM.cs" />
+    <Compile Include="ProfilingSupport\ISamplingManager.cs" />
+    <Compile Include="ProfilingSupport\ISamplingOverride.cs" />
+    <Compile Include="ProfilingSupport\SamplingManager.cs" />
+    <Compile Include="ProfilingSupport\SamplingOption.cs" />
+    <Compile Include="ProfilingSupport\SamplingOverride.cs" />
+    <Compile Include="ProfilingSupport\SamplingPolicy.cs" />
+    <Compile Include="ProfilingSupport\TokenBucket.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RaygunClient.cs" />
   </ItemGroup>
